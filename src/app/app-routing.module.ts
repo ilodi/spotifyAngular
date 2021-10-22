@@ -11,8 +11,8 @@ const routes: Routes = [
   },
   {
     path: '',
-    //vas a importar y luego tomaras ese modulo
     component: HomePageComponent,
+    //vas a importar y luego tomaras ese modulo
     loadChildren: () =>
       import(`./modules/home/home.module`).then((m) => m.HomeModule),
   },
