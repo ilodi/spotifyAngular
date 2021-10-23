@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './pages/home-page/home-page.component';
-import { HistoryModule } from '../history/history.module';
 
 const routes: Routes = [
   {
@@ -17,7 +15,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'histories',
+    path: 'history',
     loadChildren: () =>
       import('@modules/history/history.module').then((m) => m.HistoryModule),
   },

@@ -3,18 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FavoritesPageComponent } from './modules/favorites/pages/favorites-page/favorites-page.component';
-
 
 @NgModule({
-  declarations: [ // DEclaraciones pueden ser componentes, directivas, pipes
-    AppComponent, FavoritesPageComponent,
+  declarations: [
+    // DEclaraciones pueden ser componentes, directivas, pipes
+    AppComponent,
   ],
-  imports: [ //Solo se importan otros modulos
+  imports: [
+    //Solo se importan otros modulos
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
