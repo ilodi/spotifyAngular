@@ -8,7 +8,5 @@ import { Component, OnInit } from '@angular/core';
 export class FavoritesPageComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {
-    console.log('w');
-  }
+  ngOnInit(): void {}
 }
