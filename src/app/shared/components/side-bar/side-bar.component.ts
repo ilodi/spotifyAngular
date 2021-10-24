@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-bar',
@@ -24,7 +25,7 @@ export class SideBarComponent implements OnInit {
 
   customOptions: Array<any> = [];
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   // Ciclo de vida Inicial
   ngOnInit(): void {
@@ -43,6 +44,7 @@ export class SideBarComponent implements OnInit {
         name: 'Tu biblioteca',
         icon: 'uil uil-chart',
         router: ['/', 'favorites'],
+        query: { user: 'mundo' },
       },
     ];
 
@@ -75,5 +77,19 @@ export class SideBarComponent implements OnInit {
         router: ['/'],
       },
     ];
+  }
+  goTo($event: any): void {
+    this.router.navigate(['/', 'favorites'], {
+      queryParams: {
+        key1: 'value',
+        key2: 'value',
+        key3: 'value',
+      },
+    });
+    console.log($event);
+    //URL con parametros solamente es igual a
+    //http://localhost/param1/param2
+    //URL con query parametros solamente
+    //http://localhost/param?querry1=valor&query2=value3
   }
 }
